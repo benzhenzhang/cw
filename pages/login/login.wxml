@@ -1,0 +1,20 @@
+<!--login.wxml-->
+<import src="../../components/toast/toast.wxml" />
+<template is="toast" data="{{ ...$wux.toast }}" />
+
+<view class="form-common">
+  <form>
+    <view class="formc-cnt">
+      <text>账号：</text>
+      <input auto-focus bindinput="textinput" data-type="1" placeholder="请输入账号" type="text" />
+    </view>
+    <view class="formc-cnt">
+      <text>密码：</text>
+      <input auto-focus bindinput="textinput" data-type="2" type="text" placeholder="请输入密码" password="true" />
+    </view>
+    <view class="weui-btn-area text-center">
+      <button class="weui-btn" type="primary" size="mini" formType="submit" bindtap="login">登录</button>
+      <button class="weui-btn" type="primary" size="mini" bindtap="register">注册</button>
+    </view>
+  </form>
+</view>

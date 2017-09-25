@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="page" id="page">
+<scroll-view scroll-y="{{true}}" style="height:100%;"  >
+  <view class="weui-cells" wx:for="{{datas}}" wx:key="" wx:for-item="d" wx:for-index="di" style="margin-top: 0;">
+      <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">工单编号</view>
+          <view class="weui-cell__ft">{{d['WORK_ORDER_NO']}}</view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">工单状态</view>
+          <view class="weui-cell__ft">{{d['FLAG']}}</view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">设备名称</view>
+          <view class="weui-cell__ft">{{d['EQUIP_NAME']}}</view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">发生时间</view>
+          <view class="weui-cell__ft">{{d['CREAT_DATE']}}</view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">故障现象</view>
+          <view class="weui-cell__ft">{{d['FAULT_APRC']}}</view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">维修开始时间</view>
+          <view class="weui-cell__ft">{{d['PLAN_BGN_TIME']}}</view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">维修结束时间</view>
+          <view class="weui-cell__ft">{{d['PLAN_END_TIME']}}</view>
+      </view>
+      <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd">维修方案</view>
+          <view class="weui-cell__ft">{{d['REPAIR_SCHEME']}}</view>
+      </view>     
+      <view class="tr-space"></view>       
+  </view>
+</scroll-view> 
+</view>

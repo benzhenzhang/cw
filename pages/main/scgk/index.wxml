@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<import src="../../../components/picker/picker.wxml"/>
+<template is="picker" data="{{ ...$wux.picker.cxrq }}"/>
+
+<import src="../../../components/toast/toast.wxml"/>
+<template is="toast" data="{{ ...$wux.toast }}"/>
+
+<view class="page" id="page">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">查询日期</view>
+      </view>
+      <view class="weui-cell__bd">
+        <view class="weui-input" data-date="{{cxrq}}" bindtap="openTap">{{cxrq || '请选择日期'}}</view>
+      </view>
+      <view>
+        <button class="query_btn" size="mini" bindtap="query">查询</button>
+      </view>
+    </view>
+  </view>
+<scroll-view class="wa-grid text-center weui-cells" wx:if="{{ type === 'grid' }}" style="margin-top: 0;">
+  <view wx:for="{{datas}}" wx:key="" wx:for-item="d" wx:for-index="di" >
+            <view wx:for="{{d}}" wx:key="" wx:for-item="dd" wx:for-index="i" bindtap="{{i==0?'':'queryDetail'}}" wx:if="{{di==5?'':'style=\"display:none\"'}}" data-xtbh="{{i==0?'':xtbhs[i-1]}}" class="wa-grid-title border-basic {{i==0? 'tr-title':(di%2==0? 'tr-blank':'tr-gray')}}"  style="width:19%">{{dd}}</view>
+  </view>
+</scroll-view> 
+</view>

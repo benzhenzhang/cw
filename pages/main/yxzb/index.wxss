@@ -1,0 +1,13 @@
+/* index.wxss */
+
+.title-font{
+  display: flex;
+  height:auto;
+  font-size: 0.8em;
+  white-space: pre-wrap;
+
+}
+
+.content-font{
+  font-size: 0.78em;
+}

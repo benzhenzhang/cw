@@ -1,0 +1,8 @@
+/* yxzbmx.wxss */
+
+.title-font{
+  display: flex;
+  height:auto;
+  font-size: 0.8em;
+  white-space: pre-wrap;
+}

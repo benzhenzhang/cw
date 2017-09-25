@@ -1,0 +1,69 @@
+<!--index.wxml-->
+<import src="../../../components/toast/toast.wxml" />
+<template is="toast" data="{{ ...$wux.toast }}" />
+<form bindsubmit="formSubmit">
+  <view class="weui-cells">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">姓名</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input name="operName" data-type="operName" class="weui-input" type="text"  placeholder="请输入姓名" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">性别</view>
+      </view>
+      <view class="weui-cell__bd">
+        <radio-group class="weui-input" name="operGender">
+          <label><radio checked value="01"/>男</label>
+          <label><radio value="02"/>女</label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">账号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input name="operNo" data-type="operNo" class="weui-input" type="text"  placeholder="请输入账号" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">密码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input name="password" data-type="password" class="weui-input" type="text"  password="true" placeholder="请输入密码" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">确认密码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input name="sec_password" data-type="sec_password" class="weui-input" type="text"  password="true" placeholder="请再次输入密码" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">联系电话</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input name="tel" data-type="tel" class="weui-input" type="text"  placeholder="请输入电话" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">办公室电话</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input name="officeTel" data-type="officeTel" class="weui-input" type="text"  placeholder="请输入办公室电话" />
+      </view>
+    </view>
+  </view>
+  <view class="button-sp-area">
+    <button class="weui-btn" type="primary" formType="submit">注册</button>
+  </view>
+</form>

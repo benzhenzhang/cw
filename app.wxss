@@ -1,0 +1,29 @@
+/**app.wxss**/
+@import 'assets/styles/wa-ui.wxss';
+@import 'assets/styles/weui.wxss';
+@import 'components/wux.wxss';
+@import 'assets/styles/skyvow.wxss';
+
+.query_btn{
+	background-color: #10B0B1;
+	font: normal bold 12px arial, tahoma, verdana, helvetica, 宋体;
+	padding: 5px 10px;
+	color: #fff;
+	border: 1px solid #DEDEDE;
+	cursor: pointer;
+	letter-spacing: 5px;
+	margin-left: 6px;
+	margin-right: 6px;
+	width: auto;
+	height: 26px;
+}
+
+.tr-space {
+  background: #FF0000;
+  display: block;
+  font-weight: 300;
+  border: 1px solid #ddd;
+  margin: -1px 0;
+  padding: 5rpx;
+}
+

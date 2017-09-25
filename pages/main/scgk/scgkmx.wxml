@@ -1,0 +1,12 @@
+<!--scgkmx.wxml-->
+<view class="page" id="page">
+<scroll-view scroll-x="{{true}}" class="wa-grid text-center weui-cells"  style="margin-top: 0;">
+  <view wx:for="{{columns}}" name="{{item.field}}" class="wa-grid-title border-basic  tr-title"  wx:key="" style="display:{{item.hidden}};width:{{item.width}}px;">
+    {{item.title}}
+  </view>
+  <view wx:for="{{datas}}" wx:key="" wx:for-item="d" wx:for-index="di" bindtap="queryDetail">
+            <view wx:for="{{d}}" wx:key="" wx:for-item="dd" wx:for-index="i" class="wa-grid-title border-basic {{di%2==0? 'tr-blank':'tr-gray'}}" wx:if="{{i==9?'':'style=\"display:none\"'}}"
+  style="width:{{columns[i]['width']}}px">{{dd}}</view>
+  </view>
+</scroll-view>
+</view>

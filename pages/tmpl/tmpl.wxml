@@ -1,0 +1,12 @@
+<template name="grid">
+  <view class="page" id="page">
+    <scroll-view scroll-x="{{true}}" class="wa-grid text-center" wx:if="{{ type === 'grid' }}">
+  <view wx:for="{{columns}}" name="{{item.field}}" class="wa-grid-title border-basic"  wx:key="" style="display:{{item.hidden}};">
+    {{item.title}}
+  </view>
+  <view wx:for="{{datas}}" wx:key="" wx:for-item="d" bindtap="queryDetail" data-xtbh="{{d.XTBH}}">
+            <view wx:for="{{d}}" wx:key="" wx:for-item="dd" class="wa-grid-title border-basic">{{dd}}</view>
+  </view>
+</scroll-view>
+  </view>
+</template>

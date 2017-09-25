@@ -1,0 +1,8 @@
+<!--ywzbmx.wxml-->
+<view class="page" id="page">
+<scroll-view scroll-x="{{true}}" class="wa-grid text-center weui-cells"  style="margin-top: 0;">
+    <view wx:for="{{datas}}" wx:key="" wx:for-item="d" wx:for-index="di" >
+      <view wx:for="{{d}}" wx:key="" wx:for-item="dd" wx:for-index="i" wx:if="{{di==9?'':'style=\"display:none\"'}}" class="wa-grid-title border-basic {{i==0? 'tr-title':(di%2==0? 'tr-blank':'tr-gray')}}"  style="width:{{i==0?title_length:content_length}}%">{{dd}}</view>
+    </view>
+</scroll-view>
+</view>
